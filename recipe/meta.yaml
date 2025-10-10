@@ -24,7 +24,7 @@ requirements:
     - setuptools >=60
   # Base from https://github.com/E3SM-Project/zppy-interfaces/blob/v{{ version }}/conda/dev.yml
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }},<3.14
     - beautifulsoup4
     - lxml
     - matplotlib-base
