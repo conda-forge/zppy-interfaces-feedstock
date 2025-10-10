@@ -32,14 +32,14 @@ Current release info
 Installing zppy-interfaces
 ==========================
 
-Installing `zppy-interfaces` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `zppy-interfaces` from the `conda-forge/label/zppy_interfaces_dev` channel can be achieved by adding `conda-forge/label/zppy_interfaces_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/zppy_interfaces_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `zppy-interfaces` can be installed with `conda`:
+Once the `conda-forge/label/zppy_interfaces_dev` channel has been enabled, `zppy-interfaces` can be installed with `conda`:
 
 ```
 conda install zppy-interfaces
@@ -54,26 +54,26 @@ mamba install zppy-interfaces
 It is possible to list all of the versions of `zppy-interfaces` available on your platform with `conda`:
 
 ```
-conda search zppy-interfaces --channel conda-forge
+conda search zppy-interfaces --channel conda-forge/label/zppy_interfaces_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search zppy-interfaces --channel conda-forge
+mamba search zppy-interfaces --channel conda-forge/label/zppy_interfaces_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search zppy-interfaces --channel conda-forge
+mamba repoquery search zppy-interfaces --channel conda-forge/label/zppy_interfaces_dev
 
 # List packages depending on `zppy-interfaces`:
-mamba repoquery whoneeds zppy-interfaces --channel conda-forge
+mamba repoquery whoneeds zppy-interfaces --channel conda-forge/label/zppy_interfaces_dev
 
 # List dependencies of `zppy-interfaces`:
-mamba repoquery depends zppy-interfaces --channel conda-forge
+mamba repoquery depends zppy-interfaces --channel conda-forge/label/zppy_interfaces_dev
 ```
 
 
