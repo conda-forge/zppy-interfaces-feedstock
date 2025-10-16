@@ -1,5 +1,5 @@
 {% set name = "zppy-interfaces" %}
-{% set version = "0.2.0rc1" %}
+{% set version = "0.2.0rc2" %}
 {% set python_min = "3.11" %}
 
 
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/zppy-interfaces/archive/v{{ version }}.tar.gz
-  sha256: 82baaf5c5c1e69e3fc305d21c1f5c6b4d0b2c782cff6c8579a8a5c0b48fdf604
+  sha256: ace4d6571bd3bd65e38b304cc1ae014ae2fb351f038e6abd8becc3a8941dea2d
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   noarch: python
 
