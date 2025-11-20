@@ -1,5 +1,5 @@
 {% set name = "zppy-interfaces" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/zppy-interfaces/archive/v{{ version }}.tar.gz
-  sha256: 6948bedb8a667e1bce29ac4edaa21f5d0461aa8e07919d68db65fa1e6d4d7b8e
+  sha256: 77bb58eafa5b4411673e385f369d8628ec49bad99b4f59d56390ea5c0766266b
 
 build:
   number: 0
