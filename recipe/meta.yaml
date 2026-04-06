@@ -8,8 +8,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/E3SM-Project/zppy-interfaces/archive/v{{ version }}.tar.gz
-  sha256: 650f39232c1c57443e2d97a58bf17d1f394b60e5bb2743eccbfdd46890c9caf3
+  url: https://github.com/E3SM-Project/zppy-interfaces/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 7771b218c7910c00f54879ee5ae9025574acf1defe929f81e9e360a9e0f07a1e
 
 build:
   number: 0
