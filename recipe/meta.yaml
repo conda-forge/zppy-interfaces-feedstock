@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/zppy-interfaces/archive/v{{ version }}.tar.gz
-  sha256: 1337da0f91e07c98b5eea33cc6c2e9cf8d24d7942f264d7a0deddd4f91215cbf
+  sha256: 2c023bcc698e2632760e40615aa6817ee00f49eea1153664c65ecbbfe105ee48
 
 build:
   number: 0
