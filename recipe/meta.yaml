@@ -1,5 +1,5 @@
 {% set name = "zppy-interfaces" %}
-{% set version = "0.2.0rc2" %}
+{% set version = "0.2.1rc1" %}
 {% set python_min = "3.11" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/zppy-interfaces/archive/v{{ version }}.tar.gz
-  sha256: ace4d6571bd3bd65e38b304cc1ae014ae2fb351f038e6abd8becc3a8941dea2d
+  sha256: 1337da0f91e07c98b5eea33cc6c2e9cf8d24d7942f264d7a0deddd4f91215cbf
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - setuptools >=60
   # Base from https://github.com/E3SM-Project/zppy-interfaces/blob/v{{ version }}/conda/dev.yml
   run:
-    - python >={{ python_min }},<3.14
+    - python >={{ python_min }},<3.15
     - beautifulsoup4
     - lxml
     - matplotlib-base >=3.8.2
