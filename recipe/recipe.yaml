@@ -1,30 +1,31 @@
-{% set name = "zppy-interfaces" %}
-{% set version = "0.2.0" %}
-{% set python_min = "3.11" %}
+schema_version: 1
 
+context:
+  name: zppy-interfaces
+  version: "0.2.0"
+  python_min: "3.11"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/E3SM-Project/zppy-interfaces/archive/v{{ version }}.tar.gz
+  url: https://github.com/E3SM-Project/zppy-interfaces/archive/v${{ version }}.tar.gz
   sha256: 77bb58eafa5b4411673e385f369d8628ec49bad99b4f59d56390ea5c0766266b
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  number: 1
   noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
   # Build from https://github.com/E3SM-Project/zppy-interfaces/blob/v{{ version }}/conda/dev.yml
   host:
-    - python {{ python_min }}
+    - python 3.11.*
     - pip
     - setuptools >=60
-  # Base from https://github.com/E3SM-Project/zppy-interfaces/blob/v{{ version }}/conda/dev.yml
   run:
-    - python >={{ python_min }},<3.14
+    - python >=${{ python_min }},<3.14
     - beautifulsoup4
     - lxml
     - matplotlib-base >=3.8.2
@@ -36,21 +37,24 @@ requirements:
     - xarray >=2023.02.0
     - xcdat >=0.7.3,<1.0
 
-test:
-  requires:
-    - pip
-    - python {{ python_min }}
-  imports:
-    - zppy_interfaces
-  commands:
-    - zi-global-time-series --help
-    - pip check
+tests:
+  - python:
+      imports:
+        - zppy_interfaces
+      pip_check: true
+      python_version: ${{ python_min }}
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - zi-global-time-series --help
 
 about:
-  home: https://github.com/E3SM-Project/zppy-interfaces
   summary: Interfaces between external tools and zppy, E3SM post-processing toolchain
   license: BSD-3-Clause
   license_file: LICENSE
+  homepage: https://github.com/E3SM-Project/zppy-interfaces
 
 extra:
   recipe-maintainers:
