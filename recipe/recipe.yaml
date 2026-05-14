@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: zppy-interfaces
-  version: "0.2.0"
+  version: "0.2.1"
   python_min: "3.11"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/zppy-interfaces/archive/v${{ version }}.tar.gz
-  sha256: 77bb58eafa5b4411673e385f369d8628ec49bad99b4f59d56390ea5c0766266b
+  sha256: 3c71dca088133da4c49e30bdd565de8ba393cee2b9742e6aea1c049b5c34d77d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
@@ -25,7 +25,7 @@ requirements:
     - pip
     - setuptools >=60
   run:
-    - python >=${{ python_min }},<3.14
+    - python >=${{ python_min }},<3.15
     - beautifulsoup4
     - lxml
     - matplotlib-base >=3.8.2
@@ -42,10 +42,11 @@ tests:
       imports:
         - zppy_interfaces
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version: 
+        - ${{ python_min }}
+        - "*"
   - requirements:
       run:
-        - pip
         - python ${{ python_min }}.*
     script:
       - zi-global-time-series --help
