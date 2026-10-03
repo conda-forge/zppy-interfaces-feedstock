@@ -1,7 +1,7 @@
 About zppy-interfaces-feedstock
 ===============================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/zppy-interfaces-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dev-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/E3SM-Project/zppy-interfaces
 
@@ -16,8 +16,8 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <a href="https://github.com/conda-forge/zppy-interfaces-feedstock/actions/workflows/conda-build.yml">
-        <img src="https://github.com/conda-forge/zppy-interfaces-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      <a href="https://github.com/conda-forge/dev-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/dev-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -188,6 +188,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@andrewdnolan](https://github.com/andrewdnolan/)
 * [@chengzhuzhang](https://github.com/chengzhuzhang/)
 * [@forsyth2](https://github.com/forsyth2/)
 * [@mahf708](https://github.com/mahf708/)
